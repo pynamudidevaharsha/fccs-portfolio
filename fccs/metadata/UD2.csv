@@ -1,1 +1,5 @@
+Member,Parent,IsLeaf,Alias,Description,UDAType
+CostCenter,,TRUE,CostCenter,Cost center dimension,Dim
+CC001,CostCenter,TRUE,CC001,Hyderabad Cost Center,
+CC002,CostCenter,TRUE,CC002,Bangalore Cost Center,
 
