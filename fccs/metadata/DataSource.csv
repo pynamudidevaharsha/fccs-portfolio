@@ -1,1 +1,6 @@
+Member,Parent,IsLeaf,Alias,Description,SourceType,Default
+GL,,TRUE,GL,General Ledger file source,File,TRUE
+SubLedger,,TRUE,SubLedger,Subledger / sub-system,API,FALSE
+Manual,,TRUE,Manual,Manual journal entries,Manual,FALSE
+Consol,,TRUE,Consolidation,Internal consolidation process,System,FALSE
 
