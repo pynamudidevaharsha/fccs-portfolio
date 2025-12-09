@@ -1,6 +1,12 @@
-LEVEL,NAME,PARENT,ISLEAF,ENTITYTYPE,CONSOLIDATIONPARENT
-0,Global,,FALSE,ROOT,
-1,HeadOffice,Global,TRUE,Entity,Global
-1,OpCo1,Global,TRUE,Entity,Global
-1,OpCo2,Global,TRUE,Entity,Global
-
+Member,Parent,IsLeaf,Alias,DataStorage,Consolidation,Currency,OwnershipPct,Description,SolveOrder,UDAs
+Global,,FALSE,Global,Shared,Consolidated,USD,100,Top level consolidation member,0,
+APAC,Global,TRUE,APAC,Shared,Consolidated,USD,100,Asia Pacific region,1,Region:APAC
+India,APAC,TRUE,India,Shared,Consolidated,INR,100,India legal entity group,2,Country:India
+Hyderabad,India,TRUE,Hyderabad,Leaf,Consolidated,INR,100,Hyderabad legal entity,3,EntityType:OpCo
+Bangalore,India,TRUE,Bangalore,Leaf,Consolidated,INR,100,Bangalore office legal entity,3,EntityType:OpCo
+EMEA,Global,TRUE,EMEA,Shared,Consolidated,EUR,100,Europe Middle East Africa region,1,Region:EMEA
+UK,EMEA,TRUE,UK,Leaf,Consolidated,GBP,100,United Kingdom legal entity,2,Country:UK
+Germany,EMEA,TRUE,Germany,Leaf,Consolidated,EUR,100,Germany legal entity,2,Country:Germany
+Americas,Global,TRUE,Americas,Shared,Consolidated,USD,100,North and South America region,1,Region:Americas
+USA,Americas,TRUE,USA,Leaf,Consolidated,USD,100,United States legal entity,2,Country:USA
+Canada,Americas,TRUE,Canada,Leaf,Consolidated,CAD,100,Canada legal entity,2,Country:Canada
