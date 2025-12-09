@@ -1,1 +1,5 @@
+Member,Parent,IsLeaf,Alias,Description,ConsolidationType,Default
+Full Consolidation,,TRUE,FullConsol,Standard full consolidation,Full,TRUE
+Proportional,,TRUE,PropConsol,Proportional consolidation,Proportional,FALSE
+Equity,,TRUE,EquityConsol,Equity method consolidation,Equity,FALSE
 
