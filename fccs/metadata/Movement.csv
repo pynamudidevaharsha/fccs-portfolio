@@ -1,1 +1,7 @@
+Member,Parent,IsLeaf,Alias,Description
+Opening Balance,,TRUE,OpeningBalMovement,Movement type for opening balances
+Normal Movement,,TRUE,NormalMovement,Regular transactions
+Reclassification,,TRUE,ReclassMovement,Reclassifications
+Currency Translation,,TRUE,FXMovement,Foreign exchange translation movement
+Intercompany,,TRUE,IntercompanyMovement,Intercompany elimination movement
 
