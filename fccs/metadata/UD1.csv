@@ -1,1 +1,5 @@
+Member,Parent,IsLeaf,Alias,Description,UDAType
+Product,,TRUE,Product,Product group,Dim
+ProductA,,TRUE,ProductA,Product A,
+ProductB,,TRUE,ProductB,Product B,
 
