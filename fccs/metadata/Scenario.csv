@@ -1,1 +1,6 @@
+Member,Parent,IsLeaf,Alias,Description,ScenarioType,Default
+Actuals,,TRUE,Actuals,Actual results,Actual,TRUE
+Forecast,,TRUE,Forecast,Budget/Forecast projections,Forecast,FALSE
+Budget,,TRUE,Budget,Budget values,Budget,FALSE
+Variance,,TRUE,Variance,Calculated variance,Calculation,FALSE
 
