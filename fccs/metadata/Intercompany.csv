@@ -1,1 +1,6 @@
+Member,Parent,IsLeaf,Alias,Description,Counterparty
+IC_Lines,,FALSE,IC_Lines,Parent intercompany group,
+IC_OpCo1,IC_Lines,TRUE,IC_OpCo1,Intercompany for OpCo1,OpCo1
+IC_OpCo2,IC_Lines,TRUE,IC_OpCo2,Intercompany for OpCo2,OpCo2
+IC_HO,IC_Lines,TRUE,IC_HO,Intercompany for HeadOffice,HeadOffice
 
