@@ -1,119 +1,175 @@
-FCCS Hands-On Portfolio – End-to-End Implementation
+FCCS End-to-End Hands-On Portfolio (Oracle EPM Cloud)
 
-This repository contains my complete Financial Consolidation & Close Cloud Service (FCCS) hands-on work, built step-by-step to demonstrate practical experience equivalent to 2.5+ years of implementation and support.
+This repository is my complete Financial Consolidation & Close Cloud Service (FCCS) hands-on implementation project, designed to demonstrate real-world skills equivalent to 2.5+ years practical experience.
 
-The goal of this project is to simulate a real-world FCCS environment including:
+The purpose of this repo is to simulate a production-like FCCS environment with:
 
-Application setup
+Metadata modeling
 
-Metadata design & loading
+Data loading (manual + automated)
 
-Actuals data preparation & load
+Consolidation and elimination
 
-Consolidation
+Journals
 
-Reporting
+Intercompany
 
-Automation using EPM Automate
+Automated data pipelines using EPM Automate
 
-End-to-end documentation
+Smart View analysis
 
-This repository also integrates with EPBCS and EDMCS in later phases.
+Process documentation
 
-📌 Phase 1 — Environment & Metadata Setup
+End-to-end project structure for interviews
 
-This phase includes:
+Integration with EPBCS + EDMCS in later stages
 
-Application provisioning
+This project will grow step-by-step as I complete hands-on tasks.
 
-Tools setup (Smart View, EPM Automate)
+📌 1. Project Objectives
 
-Metadata design for Accounts & Entities
+Build a fully functional FCCS application from scratch
 
-Minimal working hierarchy for consolidation testing
+Demonstrate hands-on knowledge for job interviews
 
-Files included:
-File	Description
-metadata/Entity.csv	Basic parent-child Entity hierarchy
-metadata/Account.csv	Accounts for P&L + Balance Sheet
-data/Actuals_Q1_2025.csv	Sample actuals for one period to run consolidation
-📌 Phase 2 — Data Load & Consolidation
+Build a strong GitHub portfolio showcasing real work
 
-Steps covered:
+Create reusable assets: metadata templates, data files, scripts
 
-1. Prepare Metadata & Data Files
+Practice every minor FCCS topic in detail
 
-Entity hierarchy
+📁 2. Folder Structure
+fccs-portfolio/
+│
+├── README.md                 ← Project documentation
+├── LICENSE                   ← MIT license
+│
+├── metadata/                 ← Account, Entity & other dimension files
+│   ├── Entity.csv
+│   └── Account.csv
+│
+├── data/                     ← Actuals / journals / intercompany data
+│   └── Actuals_Q1_2025.csv
+│
+├── automations/              ← Scripts for EPM Automate (coming soon)
+│   └── (placeholders added)
+│
+└── docs/                     ← Screenshots, results, process docs
+    └── (placeholders added)
 
-Account hierarchy
+📌 3. Metadata Included (Phase 1)
+✔ Entity Hierarchy
 
-Actuals file for Jan 2025
+Simple parent–child structure:
 
-2. Upload using FCCS UI or EPM Automate
+Level	Entity	Parent
+0	Global	—
+1	HeadOffice	Global
+1	OpCo1	Global
+1	OpCo2	Global
+✔ Account Hierarchy
 
-Example commands (documented in later phases):
+Basic P&L + Balance Sheet accounts:
 
-epmautomate uploadFile Entity.csv
-epmautomate importMetadata Entity.csv "Entity"
-epmautomate uploadFile Actuals_Q1_2025.csv
-epmautomate importData Actuals_Q1_2025.csv "DataLoadRule"
+Total Revenue → Revenue
 
-3. Run Consolidation
+Total Expense → Expense
 
-Navigate to Consolidation → Run Full Consolidation
+Total Assets → Cash, Receivables
+
+📌 4. Data Included (Phase 1)
+Actuals_Q1_2025.csv
+
+Contains sample monthly Actuals for Jan 2025 (P&L + Cash):
+
+Entity	Account	Period	Value
+HeadOffice	Revenue	2025-01	150000
+OpCo1	Revenue	2025-01	50000
+OpCo2	Revenue	2025-01	40000
+…	…	…	…
+
+This dataset is used for:
+
+Data Load
+
+Validation
+
+First consolidation run
+
+📌 5. How to Use This Repository
+✔ Prerequisites
+
+To run this project end-to-end, you need:
+
+Oracle FCCS subscription / access
+
+EPM Automate installed
+
+Smart View installed
+
+Basic understanding of Oracle EPM Cloud navigation
+
+📌 6. Steps Covered in Phase 1
+Step 1 — Project Setup
+
+Create GitHub repo
+
+Add metadata & data files
+
+Document structure (this README)
+
+Step 2 — Metadata Load
+
+Using FCCS UI:
+
+Navigator → Overview → Dimensions → Import Metadata
+
 
 Or via EPM Automate:
 
-epmautomate runBusinessRule "FCCS_Consolidation_Full"
+epmautomate uploadFile Entity.csv
+epmautomate importMetadata "Entity.csv" Entity
 
-4. Validate in Smart View
+epmautomate uploadFile Account.csv
+epmautomate importMetadata "Account.csv" Account
 
-Connect to the FCCS instance
+Step 3 — Data Load
 
-Retrieve consolidated balances at Global entity level
+Using Data Load Rules or EPM Automate.
 
-📌 Phase 3 — Automation (Coming Soon)
+Step 4 — Run Consolidation
 
-Backup automation scripts
+Using FCCS Console or EPM Automate:
 
-Data load automations
+epmautomate runBusinessRule "FCCS_Consolidation"
 
-Consolidation cycles
+📌 7. Future Enhancements (Coming Soon)
+✔ Phase 2 — Data Load & Journal Entries
+✔ Phase 3 — Intercompany & Eliminations
+✔ Phase 4 — Cash Flow Automation
+✔ Phase 5 — EPM Automate Pipeline
+✔ Phase 6 — Reporting & Smart View Templates
+✔ Phase 7 — EPBCS + EDMCS Integration
+📌 8. Purpose of This Repository
 
-Email notifications
+This repository serves as evidence of my hands-on FCCS experience and demonstrates:
 
-📌 Phase 4 — Reporting (Coming Soon)
+Application setup skills
 
-Smart View reports
+Metadata expertise
 
-Narrative Reporting package
+Consolidation understanding
 
-Financial Statements
+Data management and automation
 
-📌 Folder Structure
-fccs-portfolio/fccs/
-├─ README.md
-├─ metadata/
-│  ├─ Entity.csv
-│  └─ Account.csv
-├─ data/
-│  └─ Actuals_Q1_2025.csv
-├─ automations/
-│  └─ (scripts coming next)
-└─ docs/
-   └─ (documentation coming next)
+Real-time troubleshooting
 
-🚀 About This Project
+📌 9. Contact
 
-This portfolio is part of my end-to-end learning plan to master FCCS from 0 → Expert level with real hands-on implementation.
-Every step is validated manually and documented for interview preparation.
+For any queries related to this project or FCCS implementation experience:
 
-If you are a recruiter or hiring manager, this repository shows:
+Name: Devaharsha
+Email: (Optional: add if you want recruiters to contact you)
+LinkedIn: (Optional)
 
-Strong understanding of the FCCS data model
-
-Practical consolidation experience
-
-Experience with automation tools
-
-Familiarity with reporting & workflow# fccs-portfolio
+End of README
