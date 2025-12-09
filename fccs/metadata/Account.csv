@@ -1,1 +1,9 @@
+LEVEL,NAME,TYPE,CURRENCY,ISLEAF
+0,TotalAssets,BS,USD,FALSE
+1,Cash,BS,USD,TRUE
+1,Receivables,BS,USD,TRUE
+0,TotalRevenue,PL,USD,FALSE
+1,Revenue,PL,USD,TRUE
+0,TotalExpense,PL,USD,FALSE
+1,Expense,PL,USD,TRUE
 
