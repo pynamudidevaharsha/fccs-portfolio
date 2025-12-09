@@ -1,1 +1,11 @@
+Entity,Account,Period,Scenario,Value,Currency
+HeadOffice,Revenue,2025-01,Actual,150000,USD
+OpCo1,Revenue,2025-01,Actual,50000,USD
+OpCo2,Revenue,2025-01,Actual,40000,USD
+HeadOffice,Expense,2025-01,Actual,50000,USD
+OpCo1,Expense,2025-01,Actual,20000,USD
+OpCo2,Expense,2025-01,Actual,18000,USD
+HeadOffice,Cash,2025-01,Actual,80000,USD
+OpCo1,Cash,2025-01,Actual,20000,USD
+OpCo2,Cash,2025-01,Actual,15000,USD
 
