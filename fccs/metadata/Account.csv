@@ -1,9 +1,19 @@
-LEVEL,NAME,TYPE,CURRENCY,ISLEAF
-0,TotalAssets,BS,USD,FALSE
-1,Cash,BS,USD,TRUE
-1,Receivables,BS,USD,TRUE
-0,TotalRevenue,PL,USD,FALSE
-1,Revenue,PL,USD,TRUE
-0,TotalExpense,PL,USD,FALSE
-1,Expense,PL,USD,TRUE
-
+Member,Parent,IsLeaf,Alias,AccountType,DataStorage,TimeBalance,Aggregation,SkipValue,Formula,SolveOrder,Description,UDA
+Total Assets,,FALSE,TotalAssets,BS,Share,Debit,Sum,No,,10,Top level Total Assets,
+Cash,Total Assets,TRUE,Cash,BS,Leaf,Debit,Sum,No,,20,Cash and cash equivalents,BS
+Receivables,Total Assets,TRUE,Receivables,BS,Leaf,Debit,Sum,No,,30,Accounts receivable,BS
+Total Liabilities,,FALSE,TotalLiabilities,BS,Share,Credit,Sum,No,,11,Top level liabilities,
+Payables,Total Liabilities,TRUE,Payables,BS,Leaf,Credit,Sum,No,,40,Accounts payable,BS
+Total Equity,,FALSE,TotalEquity,BS,Share,Credit,Sum,No,,12,Top level equity,
+Retained Earnings,Total Equity,TRUE,RetainedEarnings,BS,Leaf,Credit,Sum,No,,50,Retained earnings,Equity
+Total Revenue,,FALSE,TotalRevenue,PL,Share,Credit,Sum,No,,13,Top level revenue,
+Revenue,Total Revenue,TRUE,Revenue,PL,Leaf,Credit,Sum,No,,60,Operating revenue,PL
+Total Expense,,FALSE,TotalExpense,PL,Share,Debit,Sum,No,,14,Top level expenses,
+Expense,Total Expense,TRUE,Expense,PL,Leaf,Debit,Sum,No,,70,Operating expenses,PL
+Intercompany Eliminations,,FALSE,IntercoElim,PL,Share,Debit,Sum,No,,15,Intercompany elimination parent,
+Intercompany Revenue,Intercompany Eliminations,TRUE,IC_Revenue,PL,Leaf,Credit,Sum,No,,80,Intercompany revenue,Intercompany
+Intercompany Expense,Intercompany Eliminations,TRUE,IC_Expense,PL,Leaf,Debit,Sum,No,,90,Intercompany expense,Intercompany
+Opening Balance,,FALSE,OpeningBal,BS,System,Both,Sum,No,,1,System opening balance,Sys
+Closing Balance,,FALSE,ClosingBal,BS,System,Both,Sum,No,,999,System closing balance,Sys
+FX Translation,,FALSE,FXTranslation,BS,Shared,Both,Sum,No,,25,Foreign currency translation account,FX
+Minority Interest,Total Equity,TRUE,MinorityInterest,BS,Leaf,Credit,Sum,No,,85,Minority / non-controlling interest,Equity
