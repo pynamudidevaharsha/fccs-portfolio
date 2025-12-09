@@ -1,1 +1,6 @@
+LEVEL,NAME,PARENT,ISLEAF,ENTITYTYPE,CONSOLIDATIONPARENT
+0,Global,,FALSE,ROOT,
+1,HeadOffice,Global,TRUE,Entity,Global
+1,OpCo1,Global,TRUE,Entity,Global
+1,OpCo2,Global,TRUE,Entity,Global
 
